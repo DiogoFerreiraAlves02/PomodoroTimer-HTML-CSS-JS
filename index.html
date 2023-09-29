@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <title>Pomodoro Timer by Diogo Alves</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1>Pomodoro Timer</h1>
+                <div class="card-header-buttons">
+                    <button id="btn-pomodoro" class="active" onclick="setPomodoroType(TIMER_TYPE_POMODORO)">Pomodoro</button>
+                    <button id="btn-short-break" onclick="setPomodoroType(TIMER_TYPE_SHORT_BREAK)">Short Break</button>
+                    <button id="btn-long-break" onclick="setPomodoroType(TIMER_TYPE_LONG_BREAK)">Long Break</button>
+                </div>
+                <div class="card-body">
+                    <div id="circularProgressBar" class="progress-bar">
+                        <div class="progress-bar-inner">
+                            <h2 class="progress-value">25:00</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn-start" onclick="startTimer()">Start</button>
+                    <button class="btn-stop" onclick="stopTimer()">Stop</button>
+                    <button class="btn-reset" onclick="resetTimer()">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
